@@ -10,6 +10,10 @@ const io = new Server(server, {
   },
 });
 
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
 let objects = [];
 
 io.on("connection", (socket) => {
